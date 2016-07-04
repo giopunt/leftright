@@ -1,9 +1,9 @@
 var cacheName = 'static_0.1';
 var filesToCache = [
   '/',  
-  '/offline-ve001.html',
-  '/style-ve001.css',
-  '/client-ve001.js',
+  'offline-ve001.html',
+  'style-ve001.css',
+  'client-ve001.js',
 ];
 
 const expectedCaches  = [
