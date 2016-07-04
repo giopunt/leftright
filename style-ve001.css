@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #FFF;
+}
+
+/*green design #009688*/
+/*red design #f44336*/
+/*blue design #00bcd4*/
+/*purple design #673ab7*/
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+html, body {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #fff;
+}
+
+html, body, section button {
+  background: #000;
+}
+
+section button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+section#main {
+  text-align: center;
+}
+
+section#main div.legend, section#game, section#how-to, section#end {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+section#game {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+  -moz-transform: translate(-50%, -40%);
+  -ms-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
+}
+
+section#main h1 {
+  color: #FFF;
+  font-style: italic;
+  margin-bottom: 5px;
+  font-size: 50px;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+}
+
+section#main h2 {
+  color: #FFF;
+  font-style: italic;
+  margin-bottom: 35px;
+  font-size: 45px;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+section#main h2.left {
+  -webkit-transform: rotate(-5deg) translate(10px, 0px);
+  -moz-transform: rotate(-5deg) translate(10px, 0px);
+  -ms-transform: rotate(-5deg) translate(10px, 0px);
+  transform: rotate(-5deg) translate(-10px, 20px);
+}
+
+section#main h2.right {
+  -webkit-transform: rotate(-5deg) translate(10px, 0px);
+  -moz-transform: rotate(-5deg) translate(10px, 0px);
+  -ms-transform: rotate(-5deg) translate(10px, 0px);
+  transform: rotate(-5deg) translate(10px, 0px);
+}
+
+section#main h3 {
+  animation: blinker 1s linear infinite;
+  font-weight: 100;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 10%);
+  -moz-transform: translate(-50%, 10%);
+  -ms-transform: translate(-50%, 10%);
+  transform: translate(-50%, 10%);
+}
+
+section button {
+  color: #fff;
+  display: inline-block;
+  border: 3px solid #FFF;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+section#how-to {
+  display: none;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+section#how-to .how-to {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 18px;
+}
+
+section#how-to #next {
+  display: inline-block;
+  margin: 40px auto 0;
+}
+
+section#game {
+  display: none;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+section#game h2 {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  bottom: -200px;
+  bottom: -20vh;
+}
+
+section#game h2.time {
+  top: -100px;
+  top: -10vh;
+  font-size: 18px;
+}
+
+section#game .arrow {
+  font-size: 160px;
+  display: none;
+}
+
+section#game .text {
+  font-size: 30px;
+  font-weight: 700;
+  font-style: italic;
+  display: none;
+}
+
+section#game .arrow.invert {
+  -webkit-transform: translateY(90px);
+  -moz-transform: translateY(90px);
+  -ms-transform: translateY(90px);
+  transform: translateY(90px);
+}
+
+section#game .text.invert {
+  -webkit-transform: translateY(-150px);
+  -moz-transform: translateY(-150px);
+  -ms-transform: translateY(-150px);
+  transform: translateY(-150px);
+}
+
+section#end {
+  display: none;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+section#end h2 {
+  margin-bottom: 20px;
+}
+
+#author {
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+}
+
+section#main ~ #author {
+  bottom: 20px;
+}
+
+#author a {
+  text-decoration: none;
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 5px;
+}
+
+section#end button {
+  margin-top: 70px;
+}
+
+@keyframes blinker {  
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
