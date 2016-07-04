@@ -22,13 +22,13 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fms-icon-144x144.png">
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="/style.css"/>
-    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="manifest" href="manifest.json">
     <meta property="og:url"           content="https://hickory-hugger.hyperdev.space/" />
-	  <meta property="og:type"          content="website" />
-	  <meta property="og:title"         content="Left or Right?" />
-	  <meta property="og:description"   content="Try Left or Right, a simple brain teaser game" />
-	  <meta property="og:image"         content="https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fapple-icon-precomposed.png" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Left or Right?" />
+    <meta property="og:description"   content="Try Left or Right, a simple brain teaser game" />
+    <meta property="og:image"         content="https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fapple-icon-precomposed.png" />
   </head>
   <body>
     <section id="main">
@@ -67,7 +67,7 @@
     <script src="client.js" defer async></script>
     <script>
       if('serviceWorker' in navigator) {  
-        navigator.serviceWorker.register('/service-worker.js').then(function() { console.log('Service Worker Registered'); });  
+        navigator.serviceWorker.register('service-worker.js').then(function() { console.log('Service Worker Registered'); });  
       }
       
       if (!localStorage.getItem("offlineGA")) {
