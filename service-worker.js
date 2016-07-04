@@ -1,6 +1,6 @@
 var cacheName = 'static_0.1';
 var filesToCache = [
-  '/',  
+  '/leftright/',  
   'offline-ve001.html',
   'style-ve001.css',
   'client-ve001.js',
