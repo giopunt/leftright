@@ -162,7 +162,7 @@ section#game h2.time {
 }
 
 section#game .happy {
-  font-size: 40px;
+  -webkit-transform: scale(3);
   -webkit-animation: higher 3s ease-out;
   animation: higher 3s ease-out;
   -webit-animation-iteration-count: 1;
