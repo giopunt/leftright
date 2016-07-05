@@ -264,8 +264,7 @@
     }
 
     if(this.user.bestScore > this.globaHighscore && !this.isPrivateMode){
-      this.globaHighscore = this.score;
-      this.worldScoreText.innerHTML = this.score;
+      this.worldScoreText.innerHTML = this.user.bestScore;
       firebase.database().ref('/bestscore/').set(this.score);
     }
 
