@@ -203,6 +203,33 @@
     if( userInput != game ){
       this.endGame()
     }else{
+      var plus1 = document.createElement('p');
+      plus1.className = 'happy';
+      var positionx = this.getRandomInt(0, 150);
+      var positiony = this.getRandomInt(0, 320);
+      plus1.style.position = 'absolute';
+      plus1.style.left = positionx + 'px';
+      plus1.style.bottom = positiony  + 'px';
+
+      var emo = ['😊', '😍', '🙂', '🙊', '👍', '♥️']
+      plus1.innerHTML = emo[positionx % emo.length];
+
+      var counter = 100;
+      var moveUp = setInterval(function(){
+        positiony = positiony + 1;
+        plus1.style.bottom = (positiony + 1)  + 'px';
+        counter = counter - 1;
+        if(counter <= 0) {
+          clearInterval(moveUp);
+        }
+      }, 10);
+
+      setTimeout(function(){
+        plus1.remove();
+      }, 2000);
+
+      this.gameScreen.appendChild(plus1);
+
       this.invertText();
 
       this.displayQuestion();
@@ -272,6 +299,11 @@
       this.globaHighscore = this.score;
       this.worldScoreText.innerHTML = this.score;
       firebase.database().ref('/bestscore/').set(this.score);
+    }
+
+    var happy = document.getElementsByClassName('happy');
+    for(var i = 0; i < happy.length; i++){
+      happy[i].remove();
     }
 
     ga('send', 'event', {

@@ -161,6 +161,21 @@ section#game h2.time {
   font-size: 20px;
 }
 
+section#game .happy {
+  font-size: 25px;
+  -webkit-animation: higher 3s ease-out;
+  animation: higher 3s ease-out;
+  -webit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes higher {
+    0% { opacity: 1; }
+    100% { opacity: 0;}
+}
+
 section#game .arrow {
   font-size: 160px;
   display: none;
@@ -221,8 +236,6 @@ section#end button {
 }
 
 @keyframes blinker {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
+    from {opacity: 1; }
+    to {opacity: 0;}
 }
