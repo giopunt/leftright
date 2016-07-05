@@ -54,7 +54,7 @@
 
     try { localStorage.test = 2; } catch (e) {
       this.isPrivateMode = true;
-      this.worldScoreText.style.display = 'none';
+      this.worldScoreText.parentNode.style.display = 'none';
     }
 
     this.swipe = {
