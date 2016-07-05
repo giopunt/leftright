@@ -144,7 +144,7 @@
   }
 
   Game.prototype.invertText = function(){
-    if(this.score % 2){
+    if( (this.score + 1) % 2 !== 0){
       this.leftArrow.className = 'arrow invert';
       this.rightArrow.className = 'arrow invert';
       this.leftText.className = 'text invert';
