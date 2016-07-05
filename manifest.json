@@ -3,38 +3,38 @@
   "short_name": "Left or Right?",
   "description": "Brain teaser game where you need to follow the instruction on the screen, but don't trust the arrow",
   "background_color": "#000",
-  "theme_color": "#FFF", 
+  "theme_color": "#FFF",
   "start_url": "/?homescreen=1",
   "display": "fullscreen",
   "orientation": "portrait",
   "icons": [
   {
-   "src": "https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fandroid-icon-36x36.png",
+   "src": "android-icon-36x36.png",
    "sizes": "36x36",
    "type": "image\/png"
   },
   {
-   "src": "https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fandroid-icon-48x48.png",
+   "src": "android-icon-48x48.png",
    "sizes": "48x48",
    "type": "image\/png"
   },
   {
-   "src": "https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fandroid-icon-72x72.png",
+   "src": "android-icon-72x72.png",
    "sizes": "72x72",
    "type": "image\/png"
   },
   {
-   "src": "https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fandroid-icon-96x96.png",
+   "src": "android-icon-96x96.png",
    "sizes": "96x96",
    "type": "image\/png"
   },
   {
-   "src": "https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fandroid-icon-144x144.png",
+   "src": "android-icon-144x144.png",
    "sizes": "144x144",
    "type": "image\/png"
   },
   {
-   "src": "https://cdn.hyperdev.com/us-east-1%3A4b009de6-601c-4f7d-80ed-bc68fd98228f%2Fandroid-icon-192x192.png",
+   "src": "android-icon-192x192.png",
    "sizes": "192x192",
    "type": "image\/png"
   }

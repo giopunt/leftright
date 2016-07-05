@@ -32,6 +32,19 @@ html, body, section button {
   background: #000;
 }
 
+section button {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  border: 3px solid #FFF;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
 section button:hover {
   background-color: #fff;
   color: #000;
@@ -109,18 +122,6 @@ section#main h3 {
   transform: translate(-50%, 10%);
 }
 
-section button {
-  color: #fff;
-  display: inline-block;
-  border: 3px solid #FFF;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
 section#how-to {
   display: none;
   width: 80%;
@@ -157,7 +158,7 @@ section#game h2 {
 section#game h2.time {
   top: -100px;
   top: -10vh;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 section#game .arrow {
@@ -219,7 +220,7 @@ section#end button {
   margin-top: 70px;
 }
 
-@keyframes blinker {  
+@keyframes blinker {
     0% { opacity: 1; }
     50% { opacity: 1; }
     50.01% { opacity: 0; }
