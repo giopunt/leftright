@@ -206,7 +206,7 @@
       var plus1 = document.createElement('p');
       plus1.className = 'happy';
       var positionx = this.getRandomInt(0, 320);
-      var positiony = this.getRandomInt(0, 150);
+      var positiony = this.getRandomInt(0, 50);
       plus1.style.position = 'absolute';
       plus1.style.left = positionx + 'px';
       plus1.style.bottom = '-' + positiony  + 'px';
