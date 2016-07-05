@@ -263,6 +263,12 @@
       this.user.bestScore = this.score;
     }
 
+    if(this.user.bestScore > this.globaHighscore && !this.isPrivateMode){
+      this.globaHighscore = this.score;
+      this.worldScoreText.innerHTML = this.score;
+      firebase.database().ref('/bestscore/').set(this.score);
+    }
+
     if(this.globaHighscore < this.score && !this.isPrivateMode){
       this.globaHighscore = this.score;
       this.worldScoreText.innerHTML = this.score;
