@@ -54,8 +54,8 @@
 
     try { localStorage.test = 2; } catch (e) {
       this.isPrivateMode = true;
-      this.worldScoreText.parentNode.style.display = 'none';
     }
+    this.worldScoreText.parentNode.style.display = 'none';
 
     this.swipe = {
       left: false,
@@ -77,10 +77,10 @@
     this.startFromEnd.onclick= this.playGame.bind(this);
     this.nextBtn.onclick= this.playGame.bind(this);
 
-    firebase.database().ref('/bestscore/').on('value', function(snapshot) {
+    /*firebase.database().ref('/bestscore/').on('value', function(snapshot) {
       self.globaHighscore = snapshot.val();
       self.worldScoreText.innerHTML = self.globaHighscore;
-    });
+    });*/
   };
 
   Game.prototype.playGame = function(event){
@@ -292,13 +292,13 @@
 
     if(this.user.bestScore > this.globaHighscore && !this.isPrivateMode){
       this.worldScoreText.innerHTML = this.user.bestScore;
-      firebase.database().ref('/bestscore/').set(this.score);
+      //firebase.database().ref('/bestscore/').set(this.score);
     }
 
     if(this.globaHighscore < this.score && !this.isPrivateMode){
       this.globaHighscore = this.score;
       this.worldScoreText.innerHTML = this.score;
-      firebase.database().ref('/bestscore/').set(this.score);
+      //firebase.database().ref('/bestscore/').set(this.score);
     }
 
     var happy = document.getElementsByClassName('happy');
