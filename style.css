@@ -33,7 +33,7 @@ html, body, section button {
 
 section button {
   display: inline-block;
-  border: 3px solid #000;
+  border: 3px solid #333;
   border-radius: 2px;
   padding: 10px 20px;
   font-size: 20px;
