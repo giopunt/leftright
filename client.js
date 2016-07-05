@@ -206,18 +206,18 @@
       var plus1 = document.createElement('p');
       plus1.className = 'happy';
       var positionx = this.getRandomInt(0, 320);
-      var positiony = this.getRandomInt(0, 320);
+      var positiony = this.getRandomInt(0, 150);
       plus1.style.position = 'absolute';
       plus1.style.left = positionx + 'px';
-      plus1.style.bottom = positiony  + 'px';
+      plus1.style.bottom = '-' + positiony  + 'px';
 
       var emo = ['😊', '😍', '🙂', '🙊', '👍', '♥️']
       plus1.innerHTML = emo[positionx % emo.length];
 
       var counter = 200;
       var moveUp = setInterval(function(){
-        positiony = positiony + 1;
-        plus1.style.bottom = (positiony + 1)  + 'px';
+        positiony = parseInt(plus1.style.bottom) + 1;
+        plus1.style.bottom = positiony  + 'px';
         counter = counter - 1;
         if(counter <= 0) {
           clearInterval(moveUp);
