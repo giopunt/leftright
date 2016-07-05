@@ -30,6 +30,7 @@
 	  <meta property="og:title"         content="Left or Right?" />
 	  <meta property="og:description"   content="Try Left or Right, a simple brain teaser game" />
 	  <meta property="og:image"         content="apple-icon-precomposed.png" />
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
   </head>
   <body>
     <section id="main">
@@ -57,6 +58,7 @@
     <section id="end">
       <h2>SCORE: <span id="new-score"></span></h2>
       <h2>HIGH SCORE: <span id="high-score"></span></h2>
+      <h2>🌍 RECORD: <span id="world-score"></span></h2>
       <button id="startFromEnd">START</button>
       <div class="social" style="display:none">
         <h3>Share</h3>
@@ -90,6 +92,16 @@
       ga('send', 'pageview');
       ga('send', 'screenview', {screenName: 'Home'});
       document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
+    </script>
+
+    <script>
+      var config = {
+        apiKey: "AIzaSyA6bDoABCT2Ki8ufDwB9f--NL6KJTVISt4",
+        authDomain: "left-or-right-f4fc2.firebaseapp.com",
+        databaseURL: "https://left-or-right-f4fc2.firebaseio.com",
+        storageBucket: "left-or-right-f4fc2.appspot.com",
+      };
+      firebase.initializeApp(config);
     </script>
   </body>
 </html>

@@ -48,6 +48,8 @@
     this.liveTimeText = document.getElementById("live-time");
     this.newScoreText = document.getElementById("new-score");
     this.highScoreText = document.getElementById("high-score");
+    this.worldScoreText = document.getElementById("world-score");
+    this.globaHighscore = 0;
 
     this.swipe = {
       left: false,
@@ -62,10 +64,17 @@
   };
 
   Game.prototype.bindHandlers = function(){
+    var self = this;
+
     document.body.onkeypress = this.playGame.bind(this);
     this.startBtn.onclick= this.playGame.bind(this);
     this.startFromEnd.onclick= this.playGame.bind(this);
     this.nextBtn.onclick= this.playGame.bind(this);
+
+    firebase.database().ref('/bestscore/').on('value', function(snapshot) {
+      self.globaHighscore = snapshot.val();
+      self.worldScoreText.innerHTML = self.globaHighscore;
+    });
   };
 
   Game.prototype.playGame = function(event){
@@ -132,10 +141,10 @@
   };
 
   Game.prototype.startTimer = function(){
-    var that = this;
+    var self = this;
     var threshold = 100;
     this.timer = setInterval(function(){
-      that.updateTime(that.time - threshold);
+      self.updateTime(self.time - threshold);
     },threshold);
   }
 
@@ -246,6 +255,12 @@
 
     if(this.score > this.user.bestScore || typeof this.user.bestScore === 'undefined'){
       this.user.bestScore = this.score;
+      firebase.database().ref('/bestscore/').set(this.score);
+    }
+
+    if(this.globaHighscore < this.score){
+      this.globaHighscore = this.score;
+      this.worldScoreText.innerHTML = this.score;
     }
 
     ga('send', 'event', {
