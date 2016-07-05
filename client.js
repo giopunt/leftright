@@ -261,7 +261,6 @@
 
     if(this.score > this.user.bestScore || typeof this.user.bestScore === 'undefined'){
       this.user.bestScore = this.score;
-      firebase.database().ref('/bestscore/').set(this.score);
     }
 
     if(this.globaHighscore < this.score && !this.isPrivateMode){
