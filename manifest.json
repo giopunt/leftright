@@ -4,7 +4,7 @@
   "description": "Brain teaser game where you need to follow the instruction on the screen, but don't trust the arrow",
   "background_color": "#000",
   "theme_color": "#FFF",
-  "start_url": "?homescreen=1",
+  "start_url": "/leftright/?homescreen=1",
   "display": "fullscreen",
   "orientation": "portrait",
   "icons": [
