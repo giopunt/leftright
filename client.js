@@ -214,7 +214,7 @@
       var emo = ['😊', '😍', '🙂', '🙊', '👍', '♥️']
       plus1.innerHTML = emo[positionx % emo.length];
 
-      var counter = 100;
+      var counter = 200;
       var moveUp = setInterval(function(){
         positiony = positiony + 1;
         plus1.style.bottom = (positiony + 1)  + 'px';
