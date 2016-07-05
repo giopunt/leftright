@@ -255,19 +255,14 @@
 
     if(this.score > this.user.bestScore || typeof this.user.bestScore === 'undefined'){
       this.user.bestScore = this.score;
-      
-      firebase.database().ref('/bestscore/').on('value', function(snapshot) {
-        self.globaHighscore = snapshot.val();
-        //only change highscore if it is actually bigger than the global highscore
-        if (self.globaHighscore < this.score){
-          firebase.database().ref('/bestscore/').set(this.score);
-        }
-      });
+      // remove ref('/bestscore/').set(this.score) from here
     }
 
     if(this.globaHighscore < this.score){
       this.globaHighscore = this.score;
       this.worldScoreText.innerHTML = this.score;
+      // and paste it here where it belongs.
+      firebase.database().ref('/bestscore/').set(this.score);
     }
 
     ga('send', 'event', {
