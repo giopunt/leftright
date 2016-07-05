@@ -5,6 +5,7 @@
     <title>Left or Right?</title>
     <meta name="description" content="Brain teaser game where you need to follow the instruction on the screen, but don't trust the arrow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Left or Right?" />
     <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
@@ -22,8 +23,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="msapplication-tap-highlight" content="no" />
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="manifest" href="manifest.json">
     <meta property="og:url"           content="https://giopunt.github.io/leftright/" />
 	  <meta property="og:type"          content="website" />
@@ -66,15 +68,20 @@
       </div>
     </section>
     <div id="author">by <a href="http://www.giovannipuntil.com/portfolio/" target="_blank">giovanni puntil</a></div>
-    <script src="client.js" defer async></script>
+
+    <script type="text/javascript" src="client.js" defer async></script>
+
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=879842688786398";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=879842688786398";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <script>
       if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js').then(function() { console.log('Service Worker Registered'); });
@@ -89,6 +96,8 @@
       ga('set', 'appName', 'LeftOrRight');
       ga('send', 'pageview');
       ga('send', 'screenview', {screenName: 'Home'});
+
+      //Prevent scroll on safari standalone
       document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
     </script>
   </body>
