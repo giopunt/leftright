@@ -50,6 +50,12 @@
     this.highScoreText = document.getElementById("high-score");
     this.worldScoreText = document.getElementById("world-score");
     this.globaHighscore = 0;
+    this.isPrivateMode = false;
+
+    try { localStorage.test = 2; } catch (e) {
+      this.isPrivateMode = true;
+      this.worldScoreText.style.display = 'none';
+    }
 
     this.swipe = {
       left: false,
@@ -258,7 +264,7 @@
       firebase.database().ref('/bestscore/').set(this.score);
     }
 
-    if(this.globaHighscore < this.score){
+    if(this.globaHighscore < this.score && !this.isPrivateMode){
       this.globaHighscore = this.score;
       this.worldScoreText.innerHTML = this.score;
       firebase.database().ref('/bestscore/').set(this.score);
