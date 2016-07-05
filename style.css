@@ -5,7 +5,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #FFF;
 }
 
 /*green design #009688*/
@@ -23,20 +22,18 @@ body {
   overflow: hidden;
 }
 
-html, body {
+html, body, a {
   font-family: Verdana, Geneva, sans-serif;
-  color: #fff;
+  color: #333;
 }
 
 html, body, section button {
-  background: #000;
+  background: #fafafa;
 }
 
 section button {
-  background-color: #000;
-  color: #fff;
   display: inline-block;
-  border: 3px solid #FFF;
+  border: 3px solid #000;
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 20px;
@@ -46,8 +43,8 @@ section button {
 }
 
 section button:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #333;
+  color: #fafafa;
 }
 
 section#main {
@@ -75,16 +72,16 @@ section#game {
 }
 
 section#main h1 {
-  color: #FFF;
   font-style: italic;
   margin-bottom: 5px;
   font-size: 50px;
   text-transform: uppercase;
   transform: rotate(-5deg);
+  -webkit-text-shadow: 1px 3px 0px #ddd;
+  text-shadow: 1px 3px 0px #ddd;
 }
 
 section#main h2 {
-  color: #FFF;
   font-style: italic;
   margin-bottom: 35px;
   font-size: 45px;
@@ -147,6 +144,11 @@ section#game {
   text-align: center;
 }
 
+section#game h1 {
+  -webkit-text-shadow: 1px 3px 0px #ddd;
+  text-shadow: 1px 3px 0px #ddd;
+}
+
 section#game h2 {
   position: fixed;
   text-align: center;
@@ -174,6 +176,7 @@ section#game .happy {
 
 @keyframes higher {
     0% { opacity: 1; }
+    70% { opacity: 0.7; }
     100% { opacity: 0;}
 }
 
@@ -212,6 +215,8 @@ section#end {
 
 section#end h2 {
   margin-bottom: 20px;
+  -webkit-text-shadow: 1px 3px 0px #ddd;
+  text-shadow: 1px 3px 0px #ddd;
 }
 
 #author {
@@ -228,15 +233,10 @@ section#main ~ #author {
 
 #author a {
   text-decoration: none;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #000;
   padding-bottom: 5px;
 }
 
 section#end button {
   margin-top: 70px;
-}
-
-@keyframes blinker {
-    from {opacity: 1; }
-    to {opacity: 0;}
 }
