@@ -321,7 +321,7 @@
       eventAction: 'play',
       eventLabel: 'score',
       eventValue: this.score,
-      'metric1': this.score
+      'metric1': 1
     });
 
     this.highScoreText.innerHTML = this.user.bestScore;
