@@ -320,7 +320,8 @@
       eventCategory: 'Game Over',
       eventAction: 'play',
       eventLabel: 'score',
-      eventValue: this.score
+      eventValue: this.score,
+      'metric1': this.score
     });
 
     this.highScoreText.innerHTML = this.user.bestScore;
