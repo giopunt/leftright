@@ -51,6 +51,8 @@
     this.worldScoreText = document.getElementById("world-score");
     this.twitterLink = document.getElementById("twitterLink");
     this.facebookLink = document.getElementById("facebookLink");
+    this.originalTwitterLink = this.twitterLink.href;
+    this.originalFacebookLink = this.facebookLink.href;
     this.globaHighscore = 0;
     this.isPrivateMode = false;
 
@@ -138,6 +140,9 @@
    ga('send', 'screenview', {screenName: 'Game'});
    document.body.onkeypress = this.pause.bind(this);
    document.body.onkeydown = this.guess.bind(this);
+
+   this.twitterLink.href = this.originalTwitterLink;
+   this.facebookLink.href = this.originalFacebookLink;
 
    document.ontouchstart = this.handleTouchStart.bind(this);
    document.ontouchmove = this.handleTouchMove.bind(this);
