@@ -32,13 +32,15 @@
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="Left or Right?" />
 	  <meta property="og:description"   content="Try Left or Right, a simple brain teaser game" />
-	  <meta property="og:image"         content="https://giopunt.github.io/leftright/apple-icon-precomposed.png" />
+	  <meta property="og:image"         content="https://giopunt.github.io/leftright/ms-icon-310x310.png" />
+    <meta property="og:image:secure_url" content="https://giopunt.github.io/leftright/ms-icon-310x310.png" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://giopunt.github.io/leftright/'">
     <meta name="twitter:title" content="Left or Right?">
     <meta name="twitter:description" content="Try Left or Right, a simple brain teaser game">
     <meta name="twitter:image" content="https://giopunt.github.io/leftright/apple-icon-precomposed.png">
     <meta name="twitter:creator" content="@giovannipuntil">
+    <link rel="image_src" type="image/jpeg" href="https://giopunt.github.io/leftright/ms-icon-310x310.png" />
     <!--<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>-->
   </head>
   <body>
@@ -69,11 +71,10 @@
       <h2>HIGH SCORE: <span id="high-score"></span></h2>
       <h2>🌍 RECORD: <span id="world-score"></span></h2>
       <button id="startFromEnd">TRY AGAIN</button>
-      <div class="social" style="display:none">
+      <div class="social">
         <h3>Share</h3>
-        <div class="fb-share-button" data-href="https://giopunt.github.io/leftright/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgiopunt.github.io%2Fleftright%2F&amp;src=sdkpreparse">Share</a></div>
-        <a class="facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?app_id=879842688786398&u=https%3A%2F%2Fgiopunt.github.io%2Fleftright%2F">Facebook</a>
-        <a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?text=I%20just%20scored%20on%20Left%20or%20Right%3F%2C%20can%20you%20do%20better%3F&source=webclient">Twitter</a>
+        <a class="facebook" id="facebookLink"  target="_blank" href="https://www.facebook.com/sharer/sharer.php?app_id=879842688786398&u=https%3A%2F%2Fgiopunt.github.io%2Fleftright%2F&caption=I%20just%20scored%20{score}%20can%20you%20do%20better&display=touch&redirect_uri=https%3A%2F%2Fgiopunt.github.io%2Fleftright%2F&picture=https%3A%2F%2Fgiopunt.github.io%2Fleftright%2Fms-icon-310x310.png&p[title]=">Facebook</a>
+        <a class="twitter" id="twitterLink" target="_blank" href="https://twitter.com/intent/tweet?text=I%20just%20scored%20{score}%20at%20Left%20or%20Right%3F%2C%20can%20you%20do%20better&url=https%3A%2F%2Fgiopunt.github.io%2Fleftright%2F&source=webclient&hashtags=leftrightgame,brainpuzzle">Twitter</a>
       </div>
     </section>
     <div id="author">by <a href="http://www.giovannipuntil.com/portfolio/" target="_blank">giovanni puntil</a></div>
@@ -81,14 +82,23 @@
     <script type="text/javascript" src="client.js" defer async></script>
 
     <div id="fb-root"></div>
+    <div id="fb-root"></div>
     <script>
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=879842688786398";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '879842688786398',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
     </script>
 
     <script>

@@ -49,6 +49,8 @@
     this.newScoreText = document.getElementById("new-score");
     this.highScoreText = document.getElementById("high-score");
     this.worldScoreText = document.getElementById("world-score");
+    this.twitterLink = document.getElementById("twitterLink");
+    this.facebookLink = document.getElementById("facebookLink");
     this.globaHighscore = 0;
     this.isPrivateMode = false;
 
@@ -300,6 +302,9 @@
       this.worldScoreText.innerHTML = this.score;
       //firebase.database().ref('/bestscore/').set(this.score);
     }
+
+    this.twitterLink.href = this.twitterLink.href.replace('{score}', this.score);
+    this.facebookLink.href = this.facebookLink.href.replace('{score}', this.score);
 
     var happy = document.getElementsByClassName('happy');
     for(var i = 0; i < happy.length; i++){
