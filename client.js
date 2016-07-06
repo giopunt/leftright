@@ -319,8 +319,8 @@
     ga('send', 'event', {
       eventCategory: 'Game Over',
       eventAction: 'play',
-      eventLabel: 'score',
-      eventValue: this.score,
+      eventLabel: this.score,
+      eventValue: 1,
       'metric1': 1
     });
 
