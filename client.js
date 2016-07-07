@@ -26,7 +26,7 @@
       localStorage.removeItem(key);
   };
 
-  Setting.prototype.getAppPlatformType = function() {
+  Settings.prototype.getAppPlatformType = function() {
       var type,
           UA = navigator.userAgent;
       // Detect banner type (iOS or Android)
@@ -76,6 +76,10 @@
     this.worldScoreText = document.getElementById("world-score");
     this.twitterLink = document.getElementById("twitterLink");
     this.facebookLink = document.getElementById("facebookLink");
+
+    this.downloadApp = document.getElementById("download");
+    this.androidApp = document.getElementById("android");
+
     this.originalTwitterLink = this.twitterLink.href;
     this.originalFacebookLink = this.facebookLink.href;
     this.globaHighscore = 0;

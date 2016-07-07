@@ -248,6 +248,14 @@ section#end .social .twitter {
   display: inline-block;
 }
 
+section#main #download {
+    display: none;
+}
+
+section#main #download a, section#main #download img {
+  width: 150px;
+}
+
 section#end .social h3 {
   margin-bottom: 20px;
   -webkit-text-shadow: 1px 3px 0px #ddd;
