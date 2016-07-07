@@ -250,6 +250,7 @@ section#end .social .twitter {
 
 section#main #download {
     display: none;
+    padding-top: 50px;
 }
 
 section#main #download a, section#main #download img {

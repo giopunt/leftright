@@ -100,6 +100,11 @@
     this.updateScore(0);
     this.setUserPref();
     this.bindHandlers();
+
+    if(this.platform == 'android'){
+      this.downloadApp.style.display = 'block';
+      this.androidApp.style.display = '';
+    }
   };
 
   Game.prototype.bindHandlers = function(){
