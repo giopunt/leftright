@@ -7,6 +7,13 @@
   "start_url": "/leftright/?homescreen=1",
   "display": "fullscreen",
   "orientation": "portrait",
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.giovannipuntil.leftright",
+      "id": "com.giovannipuntil.leftright"
+    }
+  ],
   "icons": [
   {
    "src": "android-icon-36x36.png",

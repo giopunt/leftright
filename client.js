@@ -26,6 +26,31 @@
       localStorage.removeItem(key);
   };
 
+  Setting.prototype.getAppPlatformType = function() {
+      var type,
+          UA = navigator.userAgent;
+      // Detect banner type (iOS or Android)
+      if (UA.match(/Windows Phone 8/i) != null && UA.match(/Touch/i) !== null) {
+          type = 'windows';
+      } else if (UA.match(/iPhone|iPod/i) != null || UA.match(/iPad/)) {
+          if (UA.match(/Safari/i) != null &&
+              (UA.match(/CriOS/i) != null || window.Number(UA.substr(UA.indexOf('OS ') + 3, 3).replace('_', '.')) > 6)
+          ) {
+              type = 'ios'; // Check webview and native smart banner support for iOS 7+
+          }
+      } else if (UA.match(/\bSilk\/(.*\bMobile Safari\b)?/) || UA.match(/\bKF\w/) || UA.match('Kindle Fire')) {
+          type = 'kindle';
+      } else if (UA.match(/Android/i) != null && !UA.match(/Microsoft/i)) {
+          type = 'android';
+      }
+
+      if (type == 'android' || type == 'ios') {
+          return type;
+      } else {
+          return null;
+      }
+  };
+
   var Game = function(){
     this.startBtn = document.getElementById("start");
     this.startFromEnd = document.getElementById("startFromEnd");
@@ -126,6 +151,7 @@
     var user = this.userSettings.get('user');
     var theme = this.userSettings.get('theme');
 
+    this.platform = this.userSettings.getAppPlatformType();
     this.theme = theme ? theme : defTheme;
     this.user = user ? user : defUser;
     this.save();
