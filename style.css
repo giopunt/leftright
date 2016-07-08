@@ -284,3 +284,21 @@ section#main ~ #author {
 section#end button {
   margin-top: 70px;
 }
+
+#leftArrow {
+  animation: moveleft 1s infinite;
+}
+
+#rightArrow {
+  animation: moveright 1s infinite;
+}
+
+@keyframes moveleft {
+    0% { opacity: 1; transform: translateX(0)}
+    100% { opacity: 0; transform: translateX(-1em);}
+}
+
+@keyframes moveright {
+    0% { opacity: 1; transform: translateX(0)}
+    100% { opacity: 0; transform: translateX(1em);}
+}
