@@ -248,9 +248,15 @@ section#end .social .twitter {
   display: inline-block;
 }
 
+#googlePlay {
+  display: inline-block;
+  padding-top: 60px;
+  text-decoration: none;
+}
+
 section#main #download {
     display: none;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 section#main #download a, section#main #download img {

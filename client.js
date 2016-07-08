@@ -76,6 +76,7 @@
     this.worldScoreText = document.getElementById("world-score");
     this.twitterLink = document.getElementById("twitterLink");
     this.facebookLink = document.getElementById("facebookLink");
+    this.googlePlay = document.getElementById("googlePlay");
 
     this.downloadApp = document.getElementById("download");
     this.androidApp = document.getElementById("android");
@@ -102,8 +103,11 @@
     this.bindHandlers();
 
     if(this.platform == 'android'){
+      this.googlePlay.style.width =  (window.innerWidth - (window.innerWidth/5)) + 'px';
       this.downloadApp.style.display = 'block';
       this.androidApp.style.display = '';
+    }else if(this.platform == 'ios'){
+      this.googlePlay.style.display = 'none';
     }
   };
 
