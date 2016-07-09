@@ -120,6 +120,7 @@
       ga('send', 'pageview');
       ga('send', 'screenview', {screenName: 'Home'});
 
+      navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
       //Prevent scroll on safari standalone
       document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
     </script>

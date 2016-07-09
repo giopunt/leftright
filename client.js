@@ -180,6 +180,11 @@
    document.body.onkeypress = this.pause.bind(this);
    document.body.onkeydown = this.guess.bind(this);
 
+
+   if (navigator.vibrate) {
+      navigator.vibrate([0]);
+   }
+
    this.twitterLink.href = this.originalTwitterLink;
    this.facebookLink.href = this.originalFacebookLink;
 
@@ -327,6 +332,12 @@
   };
 
   Game.prototype.endGame = function(){
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
+    if (navigator.vibrate) {
+      navigator.vibrate([500]);
+    }
+
     ga('send', 'screenview', {screenName: 'End'});
     this.gameScreen.style.display = 'none';
     this.endScreen.style.display = 'block';
