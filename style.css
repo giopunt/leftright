@@ -250,7 +250,8 @@ section#end .social .twitter {
 
 #googlePlay {
   display: inline-block;
-  padding-top: 60px;
+  margin-top: 50px;
+  padding-top: 10px;
   text-decoration: none;
 }
 
