@@ -335,7 +335,7 @@
     navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
     if (navigator.vibrate) {
-      navigator.vibrate([500]);
+      navigator.vibrate([300]);
     }
 
     ga('send', 'screenview', {screenName: 'End'});
