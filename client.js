@@ -262,7 +262,7 @@
       plus1.style.left = positionx + 'px';
       plus1.style.bottom = '-' + positiony  + 'px';
 
-      var emo = ['😊', '😍', '🙂', '🙊', '👍', '💛']
+      var emo = ['😊', '😍', '🙊', '👍', '💛']
       plus1.innerHTML = emo[positionx % emo.length];
 
       var counter = 200;
