@@ -131,7 +131,7 @@
       return;
     }
 
-    this.author.style.display = 'none';
+    //this.author.style.display = 'none';
     this.mainScreen.style.display = 'none';
     this.endScreen.style.display = 'none';
 
@@ -341,7 +341,7 @@
     ga('send', 'screenview', {screenName: 'End'});
     this.gameScreen.style.display = 'none';
     this.endScreen.style.display = 'block';
-    this.author.style.display = 'block';
+    //this.author.style.display = 'block';
 
     if(this.score > this.user.bestScore || typeof this.user.bestScore === 'undefined'){
       this.user.bestScore = this.score;

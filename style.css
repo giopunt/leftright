@@ -227,7 +227,7 @@ section#end h2 span {
 }
 
 section#end .social {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 section#end .social .facebook {
@@ -275,8 +275,12 @@ section#end .social h3 {
   text-shadow: 1px 3px 0px #ddd;
 }
 
+.selling-my-soul {
+  margin-top: 20px;
+}
+
 #author {
-  display: block;
+  display: none;
   text-align: center;
   position: fixed;
   bottom: 50px;
