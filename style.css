@@ -6,6 +6,7 @@
   -ms-user-select: none;
   user-select: none;
   color: #FFF;
+  -webkit-text-size-adjust: 100%;
 }
 
 /*green design #009688*/
